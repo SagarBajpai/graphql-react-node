@@ -3,12 +3,37 @@
     {
       "id": "23",
       "firstName": "Sagar",
-      "age": 24
+      "age": 24,
+      "companyId": "3"
     },
     {
       "id": "24",
       "firstName": "Akash",
-      "age": 27
+      "age": 27,
+      "companyId": "2"
+    },
+    {
+      "id": "25",
+      "firstName": "Palak",
+      "age": 27,
+      "companyId": "1"
+    }
+  ],
+  "companies": [
+    {
+      "id": "1",
+      "name": "ICICI",
+      "description": "Banking and Wealth Management"
+    },
+    {
+      "id": "2",
+      "name": "EventCreations",
+      "description": "Events and promotions"
+    },
+    {
+      "id": "3",
+      "name": "RazoyPay",
+      "description": "Payments"
     }
   ]
 }

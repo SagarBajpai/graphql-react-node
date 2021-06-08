@@ -4,6 +4,21 @@ const axios = require("axios");
 
 const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = graphql;
 
+const CompanyType = new GraphQLObjectType({
+  name: "Companies",
+  fields: {
+    id: {
+      type: GraphQLString,
+    },
+    name: {
+      type: GraphQLString,
+    },
+    description: {
+      type: GraphQLString,
+    },
+  },
+});
+
 // Schema for a User
 const UserType = new GraphQLObjectType({
   name: "User",
@@ -16,6 +31,14 @@ const UserType = new GraphQLObjectType({
     },
     age: {
       type: GraphQLInt,
+    },
+    company: {
+      type: CompanyType,
+      resolve(parentValue, args) {
+        return axios
+          .get(`http://localhost:3000/companies/${parentValue.companyId}`)
+          .then((response) => response.data);
+      },
     },
   },
 });
