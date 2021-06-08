@@ -1,5 +1,6 @@
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql"); // This library is a glue-layer between express server and graphQL
+const schema = require("./schema/schema");
 
 const app = express();
 
@@ -8,6 +9,7 @@ const app = express();
 app.use(
   "/graphql",
   graphqlHTTP({
+    schema,
     graphiql: true,
   })
 );
