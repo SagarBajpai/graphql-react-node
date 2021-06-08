@@ -1,6 +1,9 @@
-### Go to http://localhost:4200/graphql
+Generally you'll have a remote server from which graphQL APIs will fetch the data from.
+We're gonna use 'json-server' npm package to create a dummy server inside this same project.
+db.json inside users folder will act as a remote server.
 
-You'll see the Graphiql Interface.
-Type your Query on the left and see the results on the right :zap:
+After installing `json-server`, add a script in package.json - `json:server": "json-server --watch db.json`.
+Hit the command `npm run json:server` in the terminal and you could you server running at `http://localhost:3000`.
 
-![Graphiql](./media/graphiql.png)
+Go to `http://localhost:3000/users` to fetch user details.
+Go to `http://localhost:3000/users/23` to fetch user data using id details.
