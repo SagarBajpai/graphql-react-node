@@ -7,3 +7,5 @@ Hit the command `npm run json:server` in the terminal and you could you server r
 
 Go to `http://localhost:3000/users` to fetch user details.
 Go to `http://localhost:3000/users/23` to fetch user data using id details.
+
+Now you can check users details using company details, so its now a circular relation
